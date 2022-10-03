@@ -15,7 +15,7 @@ class TorneoController extends Controller
     public function index()
     {
         $torneos = Torneo::all();
-        return view('torneoIndex', compact('torneos'));
+        return view('torneos/torneosIndex', compact('torneos'));
     }
 
     /**
@@ -25,7 +25,7 @@ class TorneoController extends Controller
      */
     public function create()
     {
-        //
+        return view('torneos/torneosCreate');
     }
 
     /**

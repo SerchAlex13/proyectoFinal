@@ -15,7 +15,12 @@ class CreateTorneosTable extends Migration
     {
         Schema::create('torneos', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('nombre');
+            $table->string('sede');
+            $table->string('organizador');
+            $table->date('fundacion')->nullable();
+            $table->string('formato');
+            $table->integer('numero_equipos')->unsigned()->default(0);
         });
     }
 
