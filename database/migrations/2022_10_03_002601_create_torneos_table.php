@@ -19,6 +19,7 @@ class CreateTorneosTable extends Migration
             $table->string('sede');
             $table->string('organizador');
             $table->date('fundacion')->nullable();
+            $table->integer('numero_ediciones')->unsigned()->nullable();
             $table->string('formato');
             $table->integer('numero_equipos')->unsigned()->default(0);
         });
